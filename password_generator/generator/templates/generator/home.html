@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Home-Password Generator</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  </head>
+  <body>
+      <div class="jumbotron jumbotron-fluid">
+              <h3 class="display-4" style="text-align:center;">Welcome to the password generator!</h3>
+              <hr class="container">
+              <p class="lead" style="text-align:center; font-weight:">Adjust the settings according to your needs and hit 'Generate' button.</p>
+          </div>
+    <h1 style="text-align: center;"></h1>
+    <form action= "{% url 'passwordpage' %}"  method="get" style="text-align:center; font-size:20px;">
+      <label>Choose Length:  <select class="" name="length">
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10" selected>10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+          <option value="13">13</option>
+          <option value="14">14</option>
+      </select></label>
+      <br><br>
+      <label>Uppercase Letters: <input type="checkbox" name="uppercase" value="on" checked></label>
+      <br><br>
+      <label>Numeric Characters: <input type="checkbox" name="numbers" value="on" checked></label>
+      <br><br>
+      <label>Special Characters: <input type="checkbox" name="specialchar" value="on" checked></label>
+      <br><br>
+      <input type="submit" name="submit" class="btn btn-primary" value="Generate">
+    </form>
+
+  </body>
+</html>
